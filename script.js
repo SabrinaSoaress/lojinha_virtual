@@ -1,28 +1,28 @@
 const items = [
     {
         id: 0,
-        nome: 'bolo',
+        nome: ' Bolo ',
         img: 'compras.png',
         quantidade: 0
     },
 
     {
         id: 1,
-        nome: 'brownie',
+        nome: ' Brownie ',
         img: 'compras.png',
         quantidade: 0
     },
 
     {
         id: 2,
-        nome: 'cupcake',
+        nome: ' Cupcake ',
         img: 'compras.png',
         quantidade: 0
     },
 
     {
         id: 3,
-        nome: 'sonho',
+        nome: ' Sonho ',
         img: 'compras.png',
         quantidade: 0
     },
@@ -49,9 +49,10 @@ atualizarCarrinho = () => {
     items.map((val) => {
         if(val.quantidade > 0){
         containerCarrinho.innerHTML += `
-
-        <p>`+val.nome+`| quantidade: `+val.quantidade+`</p>
-        <hr>
+        <div class="checkout">
+        <p style="float:left;">Produto: `+val.nome+`</p>
+        <p style="float:right;">Quantidade: `+val.quantidade+`</p>
+        <div style="clear:both"></div>
         `;
         }
     })
